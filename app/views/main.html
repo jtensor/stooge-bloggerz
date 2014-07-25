@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h1>'Allo, 'Allo!</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
@@ -20,4 +20,37 @@
 
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
+</div> -->
+<div ng-controller="BlogCtrl">
+<!-- <p> Blog Posts</p> -->
+<!-- <input class="form-control" ng-model="searchAuthor"> -->
+<!-- <div ng-repeat="post in blogPosts | filter:searchAuthor" > -->
+<!-- <h2>This is the author{{authorFilter}}</h2>
+<div ng-repeat="post in blogPosts | filter:authorFilter" >
+  <h2>{{post.title}}</h2>
+
+  <small>{{post.body }}</small>
+  <p>{{post.author}}</p>
+</div> -->
+  <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="btn" ng-repeat="author in authorList" ng-click="searchAuthor(author)">
+            {{author.author}}
+          </li> 
+
+          <!-- <li><a ng-href="#">Curly</a></li>
+          <li><a ng-href="#">Moe</a></li> -->
+        </ul>
+        <h3 class="text-muted">stoogeBloggerz</h3>
+        <p> Blog Posts</p>
+        <!-- <input class="form-control" ng-model="searchAuthor"> -->
+        <!-- <div ng-repeat="post in blogPosts | filter:searchAuthor" > -->
+       
+        <div ng-repeat="post in blogPosts | filter:authorFilter" >
+        <h2>{{post.title}}</h2>
+
+        <small>{{post.body }}</small>
+          <p>{{post.author}}</p>
+        </div>
+      </div>
 </div>
